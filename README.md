@@ -133,3 +133,25 @@ Vous aurez besoin des commandes suivantes :
 - `git tag` : Ajoute un tag sur un commit
 
 > Si celà vous intéresse, un outil a été implementé pour réaliser automatiquement ces branches. Il s'agit de [git-flow](https://danielkummer.github.io/git-flow-cheatsheet/)
+
+## Exercice 3
+
+Cette complexité des branches est très pratique en entreprise mais lorsque vous réalisez des projets en école vous n'avez pas besoin d'utiliser un modèle aussi complexe pour le processus de livraison. Toujours est-il que prenez l'habitude de ne pas travailler sur la branche `main` mais de travailler sur la branche `develop`. Et utilisez les branches features pour les projets en groupe pour ne pas impacter vos collègues. **N'oubliez pas, le jour de la livraison au formateur de tout merger sur la branche main !**
+
+Les merge de branches sont monnaie courante losqu'on utilise git. Et contrairement à ce qui a été évoqué lors de l'exercice 1, l'utilisation de branches ne prémunit en aucun cas des conflits de merge.
+Les outils tels que gitlab ou github permettent de gérer la fusion des branches par une interface graphique. Celà s'appelle des "Merge Requests".
+
+Le concept est simple, en équipe, vous n'avez pas toujours les droits pour fusionner sur la branch `develop` ou `release`, mais vous pouvez faire une merge request et assigner cette merge request à une personne habilitée. Cette dernière peut alors regarder votre code et appliquer ( ou refuser ) le merge.
+
+Pour celà, au sein du dépôt, allez dans `Code > Merge Request`, spécifiez la branche que vous souhaitez merge ainsi que la branche destination. 
+Vous aurez alors la possibilité de rajouter de plus amples détails tels que : 
+ - qui peut réaliser le merge.
+ - une description sur les tâches réalisées
+ - squash des commits
+ - ...
+
+Réalisez un petit projet simple avec un binôme afin de voir comment s'utilise les merge requests. Lors de vos tests faites deux cas de figure : 
+ - une merge requests où il y a eu plusieurs commits de réalisés. 
+ - une merge request qui mène à un conflit de merge.
+
+Lors de vos tests, amusez-vous à refuser des MR, à en accepter d'autres, afin de bien éprouver le système.
