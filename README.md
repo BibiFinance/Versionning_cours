@@ -13,7 +13,7 @@ Une première pratique, souvent vue sur des projets étudiants mais déconseill�
 git clone git@gitlab.com:docusland-courses/versionning/git-branch.git
 cd git-branch
 git switch --create branche-de-marcel
-touch marcel.md
+echo $null > marcel.md
 git add marcel.md
 git commit -m "add marcel.md"
 git push --set-upstream origin branche-de-marcel
@@ -77,6 +77,7 @@ Si une branche locale ne vous sert plus, vous pouvez la supprimer:
 git branch --delete branche-de-marcel
 ```
 
+> A vous de trouver comment supprimer une branche distante :)
 
 ## Exercice 2
 Après la sortie de git, un modèle de branches nommé "git flow" a été imaginé par M. Vincent Driessen. Il s'agit d'une première standardisation des branches qui a été mis en place dans de nombreuses entreprises. Vous trouverez une documentation [plus détaillée ici en anglais](https://nvie.com/posts/a-successful-git-branching-model/)
